@@ -38,7 +38,7 @@ with mlflow.start_run():
     dt = DecisionTreeClassifier(max_depth=max_depth)
     dt.fit(X_train, y_train)
 
-    y_pred = dt.fit(X_test)
+    y_pred = dt.predict(X_test)
 
     mlflow.log_metric("Accuracy - ", accuracy_score(y_pred, y_test))
     mlflow.log_param("Max Depth - ", max_depth)
