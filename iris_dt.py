@@ -64,4 +64,4 @@ with mlflow.start_run():
     mlflow.sklearn.log_model(dt, name="Decision Tree")
 
     # sets tags.
-    mlflow.set_log("Author", "kushx")
+    mlflow.set_tag("Author", "kush")
