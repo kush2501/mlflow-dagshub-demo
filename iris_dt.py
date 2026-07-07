@@ -12,6 +12,14 @@ from sklearn.metrics import (
     confusion_matrix
 )
 
+# mlflow tracking.
+import dagshub
+dagshub.init(repo_owner='kush2501', repo_name='mlflow-dagshub-demo', mlflow=True)
+
+
+# mlflow tracking uri.
+mlflow.set_tracking_uri("https://dagshub.com/kush2501/mlflow-dagshub-demo.mlflow")
+
 
 iris = load_iris()
 
